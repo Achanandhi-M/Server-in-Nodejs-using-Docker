@@ -1,17 +1,17 @@
-From node:18
+FROM node:18
 
-Workdir /home/achanandhi/Server-in-Nodejs
+WORKDIR /home/achanandhi/Server-in-Nodejs
 
 
-copy package*.json ./
+COPY package*.json ./
 
-Run npm install
+RUN npm install
 
-Copy . .
+COPY . .
 
-Expose 3000
+EXPOSE 3000
 
-Cmd [ "npm", "start" ]
+CMD [ "npm", "start" ]
 
 
 
