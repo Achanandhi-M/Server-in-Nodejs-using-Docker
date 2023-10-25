@@ -8,8 +8,20 @@ pipeline {
     }
 
     stage('Listing') {
-      steps {
-        sh 'ls -la'
+      parallel {
+        stage('Listing') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
+        stage('Testing') {
+          steps {
+            sh '''cd  /home/achanandhi/Server-in-Nodejs
+&& npm i && npm   test:unit'''
+          }
+        }
+
       }
     }
 
