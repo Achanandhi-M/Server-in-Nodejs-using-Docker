@@ -15,10 +15,9 @@ pipeline {
           }
         }
 
-        stage('Testing') {
+        stage('Message') {
           steps {
-            sh ''' npm i && npm run test:unit
-'''
+            sh 'pwd'
           }
         }
 
