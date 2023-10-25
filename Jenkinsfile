@@ -17,7 +17,7 @@ pipeline {
 
         stage('Testing') {
           steps {
-            sh '''cd Server-in-Nodejs-using-Docker && npm i && npm run test:unit
+            sh ''' npm i && npm run test:unit
 '''
           }
         }
