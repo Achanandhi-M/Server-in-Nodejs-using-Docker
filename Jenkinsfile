@@ -18,7 +18,7 @@ pipeline {
         stage('Testing') {
           steps {
             sh '''cd  /home/achanandhi/
-&& npm i && npm   test:unit'''
+&& npm i && npm run   test:unit'''
           }
         }
 
